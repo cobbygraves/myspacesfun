@@ -4,9 +4,8 @@ const uuid = require("uuid");
 const fs = require("fs");
 const path = require("path");
 
+//logic to add post to the database
 const addPost = (req, res, next) => {
-  //logic to add post to the database
-
   const postDate = new Date();
   const year = postDate.getFullYear();
   const monthIndex = postDate.getMonth() + 1;
@@ -157,6 +156,7 @@ const deletePost = (req, res, next) => {
   });
 };
 
+// method to change post status in the database
 const togglePublish = (req, res, next) => {
   const updatedPost = req.body;
   const { id } = updatedPost;
