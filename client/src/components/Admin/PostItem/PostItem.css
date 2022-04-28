@@ -1,0 +1,39 @@
+.Admin-Post-Item {
+  display: flex;
+  margin-top: 15px;
+}
+
+.Admin-Post-Item h4 {
+  flex: 2;
+  cursor: pointer;
+}
+
+.Admin-Post-Buttons {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.Admin-Post-Buttons button {
+  outline: none;
+  border: none;
+}
+
+.Admin-Post-Item hr {
+  width: 75%;
+  color: #ccc;
+  border: 1px;
+}
+
+@media screen and (max-width: 450px) {
+  .Admin-Post-Item {
+    display: block;
+  }
+
+  .Admin-Post-Buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+  }
+}

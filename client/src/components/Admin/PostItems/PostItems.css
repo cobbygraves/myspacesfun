@@ -1,0 +1,11 @@
+.Admin-Post-Items {
+  /* margin-top: 65px; */
+  width: 95vw;
+  margin: 75px 0 45px 10px;
+}
+
+@media screen and (max-width: 450px) {
+  .Admin-Post-Items {
+    margin-bottom: 15px;
+  }
+}

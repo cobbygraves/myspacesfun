@@ -1,0 +1,14 @@
+.dropdown-menu.show {
+  display: block;
+  background: transparent;
+}
+
+a {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .dropdown-menu.show {
+    background-color: white;
+  }
+}

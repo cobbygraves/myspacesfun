@@ -1,0 +1,10 @@
+.Alert-Root {
+  width: 45%;
+  margin-bottom: 45px;
+}
+
+@media only screen and (max-width: 576px) {
+  .Alert-Root {
+    width: 75%;
+  }
+}

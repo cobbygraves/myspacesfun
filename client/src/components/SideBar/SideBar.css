@@ -1,0 +1,32 @@
+.Sidebar {
+  width: 20%;
+  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  .Sidebar {
+    width: 100%;
+  }
+}
+
+.Sidebar-Category-Item {
+  display: inline-block;
+  width: 50%;
+  padding: 5px;
+}
+
+.Sidebar-Category-Item:hover {
+  background-color: rgb(6, 6, 27);
+}
+
+.Sidebar-Category-Item:hover button {
+  color: white;
+}
+
+.Follow-Us {
+  display: flex;
+  justify-content: center;
+}

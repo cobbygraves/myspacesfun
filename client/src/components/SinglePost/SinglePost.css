@@ -1,0 +1,45 @@
+.SinglePost {
+  margin-top: 73px;
+}
+
+.SinglePost p {
+  padding: 0 25px;
+}
+
+.SinglePost p::first-letter {
+  font-size: 25px;
+  margin-left: 15px;
+  font-weight: bolder;
+}
+
+.SinglePost img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.SinglePost-Details {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 25px;
+}
+
+.SinglePost h2 {
+  text-align: center;
+}
+
+@media screen and (max-width: 450px) {
+  .SinglePost-Details {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  .SinglePost h2 {
+    text-align: start;
+  }
+
+  .SinglePost p {
+    padding: 0;
+  }
+}

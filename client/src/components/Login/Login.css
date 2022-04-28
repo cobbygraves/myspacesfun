@@ -1,0 +1,26 @@
+.Login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url("../../assets/images/bestRoom.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.Login-Wrapper {
+  width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #d9dbdf;
+}
+
+.Login-Wrapper input {
+  height: 45px;
+  font-size: large;
+}
+
+@media screen and (max-width: 450px) {
+  .Login-Wrapper {
+    width: 90vw;
+  }
+}

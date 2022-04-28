@@ -1,0 +1,94 @@
+.Edit-Container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.Edit-Button {
+  margin-left: 75px;
+}
+
+.Edit-Image {
+  margin-left: 75px;
+  border-radius: 10px;
+  width: 25%;
+  height: 225px;
+  object-fit: cover;
+}
+
+.Edit-Label {
+  font-size: 30px;
+  color: rgb(179, 178, 178);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.Edit-Content {
+  margin-left: 75px;
+  border: none;
+  outline: none;
+  width: 75%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.Edit-Error {
+  margin-left: 75px;
+}
+
+.Edit-Category {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 75px;
+}
+
+.Edit-Select {
+  text-align: center;
+  background-color: #a0a6ab;
+  height: 38px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 5px;
+  color: white;
+}
+
+@media screen and (max-width: 450px) {
+  .Edit-Button {
+    margin-left: 0;
+  }
+
+  .Edit-Label {
+    margin-left: 0;
+  }
+
+  .Edit-Error {
+    margin-left: 0;
+  }
+
+  .Edit-Content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Edit-Container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .Edit-Image {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .Edit-Category {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .Create-Button,
+  .Edit-Select {
+    margin-bottom: 40px;
+  }
+}

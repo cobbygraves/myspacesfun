@@ -1,0 +1,11 @@
+.Home-Page {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+}
+
+@media screen and (max-width: 450px) {
+  .Home-Page {
+    display: block;
+  }
+}

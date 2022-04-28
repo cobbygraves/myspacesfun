@@ -1,0 +1,27 @@
+/*app component*/
+.App-Root {
+  margin: 0;
+  padding: 0;
+}
+
+.App-Toast-enter {
+  opacity: 0;
+  transform: translateY(100);
+}
+
+.App-Toast-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 300ms ease-in;
+}
+
+.App-Toast-exit {
+  /* opacity: 1;
+  transform: translateY(0); */
+}
+
+.App-Toast-exit-active {
+  opacity: 0;
+  transform: translateY(100);
+  transition: all 300ms ease-in;
+}
