@@ -11,7 +11,7 @@ const images = [
 ];
 let image = Math.floor(Math.random() * 5);
 
-const SideBar = () => {
+const SideBar = (props) => {
   const [showCategories, setShowcategories] = useState(false);
 
   return (
@@ -79,7 +79,12 @@ const SideBar = () => {
               key={cat}
               className="text-center border border-bottom Sidebar-Category-Item"
             >
-              <button className="btn btn-text lead">{cat}</button>
+              <button
+                className="btn btn-text lead"
+                onClick={() => props.categoriesPosts(cat)}
+              >
+                {cat}
+              </button>
             </li>
           ))}
         </ul>

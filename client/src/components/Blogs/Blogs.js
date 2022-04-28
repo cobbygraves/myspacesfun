@@ -28,7 +28,7 @@ const Blogs = (props) => {
             }
           })
         ) : (
-          <h3 className="text-muted text-center">Loading blogs...</h3>
+          <h3 className="text-muted text-center">Loading...</h3>
         )}
       </div>
     </div>

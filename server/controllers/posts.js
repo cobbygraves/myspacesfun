@@ -94,6 +94,18 @@ const showPost = (req, res) => {
   });
 };
 
+//read post category from database
+const readCat = (req, res) => {
+  const postCategory = req.params.postCat;
+  PostModel.find({ category: postCategory }, (err, doc) => {
+    if (!err) {
+      res.send(doc);
+    } else {
+      res.status(404).json({ message: "Something went wrong" });
+    }
+  });
+};
+
 //update post in the database
 const updatePost = (req, res, next) => {
   let fileName = "";
@@ -166,6 +178,7 @@ const togglePublish = (req, res, next) => {
 };
 
 module.exports = {
+  readCat,
   updatePost,
   addPost,
   readPosts,

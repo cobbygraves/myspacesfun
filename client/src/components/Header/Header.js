@@ -15,7 +15,7 @@ const Header = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div className="container-fluid">
-        <a className="navbar-brand fw-bold" onClick={() => navigate("/")}>
+        <a className="navbar-brand fw-bold" href="/">
           SPACES.FUN
         </a>
         <button
@@ -31,8 +31,8 @@ const Header = () => {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item" onClick={() => navigate("/")}>
-              <a className="nav-link active lead" aria-current="page">
+            <li className="nav-item">
+              <a className="nav-link active lead" aria-current="page" href="/">
                 Blog
               </a>
             </li>

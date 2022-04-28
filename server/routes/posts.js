@@ -1,4 +1,5 @@
 const {
+  readCat,
   updatePost,
   addPost,
   readPosts,
@@ -13,6 +14,7 @@ const verifyToken = require("../middlewares/verifyToken");
 const postRouter = express.Router();
 
 postRouter.get("/posts", readPosts);
+postRouter.get("/posts/category/:postCat", readCat);
 postRouter.get("/posts/:id", showPost);
 postRouter.delete("/posts/:id", verifyToken, deletePost);
 postRouter.post("/posts/create", verifyToken, upload.single("image"), addPost);

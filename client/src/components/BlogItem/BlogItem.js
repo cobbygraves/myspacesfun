@@ -16,7 +16,7 @@ const BlogItem = (props) => {
         style={{ width: "100%", height: 200 }}
       />
       <div className="card-body">
-        <h5 className={`card-title ${props.cat}`}>{props.title}</h5>
+        <h5 className={`card-title ${props.cat} Card-Title`}>{props.title}</h5>
         <p className="card-text Card-Item-Preview">{props.content}</p>
         <Link to={`/post/${props.id}`}>
           <button className="btn btn-light text-muted">read more</button>
