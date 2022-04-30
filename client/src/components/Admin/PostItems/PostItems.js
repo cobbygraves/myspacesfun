@@ -4,7 +4,7 @@ import PostItem from "../postItem/postItem";
 import axios from "axios";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
-import * as ActionCreators from "../../../redux/actionCreators";
+import * as ActionCreators from "../../../redux/actioncreators";
 import HOSTURL from "../../../config";
 
 const PostItems = () => {

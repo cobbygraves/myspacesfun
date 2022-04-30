@@ -1,6 +1,6 @@
 import React from "react";
 import BlogItem from "../blogItem/blogItem";
-import ErrorBoundary from "../errorBoundary/errorBoundary";
+import ErrorBoundary from "../errorboundary/errorboundary";
 import "./blogs.css";
 import HOSTURL from "../../config";
 

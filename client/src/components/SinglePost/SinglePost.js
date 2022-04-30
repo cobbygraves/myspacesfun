@@ -1,8 +1,8 @@
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./singlePost.css";
+import "./singlepost.css";
 import Home from "../home/home";
-import SideBar from "../sideBar/sideBar";
+import SideBar from "../sidebar/sidebar";
 import axios from "axios";
 import HOSTURL from "../../config";
 

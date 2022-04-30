@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import "./createPost.css";
-import * as ActionCreators from "../../../redux/actionCreators";
+import "./createpost.css";
+import * as ActionCreators from "../../../redux/actioncreators";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
 import HOSTURL from "../../../config";

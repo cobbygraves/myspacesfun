@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { CATEGORIES } from "../../data";
-import "./sideBar.css";
+import "./sidebar.css";
 
 const images = [
   "bottlesthree.jpg",

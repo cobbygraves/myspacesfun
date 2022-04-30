@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./login.css";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
-import * as ActionCreators from "../../redux/actionCreators";
+import * as ActionCreators from "../../redux/actioncreators";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../spinner/Spinner";
