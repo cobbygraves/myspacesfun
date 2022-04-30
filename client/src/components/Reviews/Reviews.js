@@ -1,6 +1,6 @@
 import React from "react";
 import OwlCarousel from "react-owl-carousel";
-import "./Reviews.css";
+import "./reviews.css";
 
 const Reviews = () => {
   const options = {

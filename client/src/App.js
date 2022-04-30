@@ -1,22 +1,22 @@
 import React, { useEffect } from "react";
-import "./App.css";
-import "./Global.css";
-import Alert from "./components/Alert/Alert";
-import * as ActionCreators from "./redux/ActionCreators";
+import "./app.css";
+import "./global.css";
+import Alert from "./components/alert/alert";
+import * as ActionCreators from "./redux/actionCreators";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
 import { CSSTransition } from "react-transition-group";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import Homepage from "./components/Homepage/Homepage";
-import Login from "./components/Login/Login";
-import PostItems from "./components/Admin/PostItems/PostItems";
-import CreatePost from "./components/Admin/CreatePost/CreatePost";
-import SinglePost from "./components/SinglePost/SinglePost";
-import Videos from "./components/Videos/Videos";
-import Gallery from "./components/Gallery/Gallery";
-import Contact from "./components/Contact/Contact";
+import Header from "./components/header/header";
+import Footer from "./components/footer/footer";
+import Homepage from "./components/homepage/homepage";
+import Login from "./components/login/login";
+import PostItems from "./components/admin/postItems/postItems";
+import CreatePost from "./components/admin/createPost/createPost";
+import SinglePost from "./components/singlePost/singlePost";
+import Videos from "./components/videos/videos";
+import Gallery from "./components/gallery/gallery";
+import Contact from "./components/contact/contact";
 
 function App() {
   const { alert, userAuthenticated } = useSelector((state) => state);

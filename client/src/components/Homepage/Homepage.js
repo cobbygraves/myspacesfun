@@ -1,14 +1,14 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Carousel from "../Carousel/Carousel";
-import Home from "../Home/Home";
-import Blogs from "../Blogs/Blogs";
-import SideBar from "../SideBar/SideBar";
-import Reviews from "../Reviews/Reviews";
+import Carousel from "../carousel/carousel";
+import Home from "../home/home";
+import Blogs from "../blogs/blogs";
+import SideBar from "../sideBar/sideBar";
+import Reviews from "../reviews/reviews";
 import axios from "axios";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
-import * as ActionCreators from "../../redux/ActionCreators";
-import HOSTURL from "../../Config";
+import * as ActionCreators from "../../redux/actionCreators";
+import HOSTURL from "../../config";
 
 const Homepage = () => {
   const [blogs, setBlogs] = useState([]);

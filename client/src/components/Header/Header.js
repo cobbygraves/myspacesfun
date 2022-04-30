@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux";
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { useNavigate } from "react-router-dom";
 import { bindActionCreators } from "redux";
-import * as ActionCreators from "../../redux/ActionCreators";
-import "./Header.css";
+import * as ActionCreators from "../../redux/actionCreators";
+import "./header.css";
 
 const Header = () => {
   const isUserAuth = useSelector((state) => state.userAuthenticated);

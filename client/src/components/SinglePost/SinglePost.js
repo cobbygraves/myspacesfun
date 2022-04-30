@@ -1,10 +1,10 @@
 import React, { useCallback, useLayoutEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import "./SinglePost.css";
-import Home from "../Home/Home";
-import SideBar from "../SideBar/SideBar";
+import "./singlePost.css";
+import Home from "../home/home";
+import SideBar from "../sideBar/sideBar";
 import axios from "axios";
-import HOSTURL from "../../Config";
+import HOSTURL from "../../config";
 
 const SinglePost = (props) => {
   const { id } = useParams();

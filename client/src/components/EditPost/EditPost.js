@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "./EditPost.css";
+import "./editPost.css";
 import axios from "axios";
-import * as ActionCreators from "../../redux/ActionCreators";
+import * as ActionCreators from "../../redux/actionCreators";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
-import HOSTURL from "../../Config";
+import HOSTURL from "../../config";
 
 const EditPost = (props) => {
   const dispatch = useDispatch();

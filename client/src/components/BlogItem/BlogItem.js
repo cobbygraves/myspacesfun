@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import "./BlogItem.css";
+import "./blogItem.css";
 import { Link } from "react-router-dom";
 
 const BlogItem = (props) => {

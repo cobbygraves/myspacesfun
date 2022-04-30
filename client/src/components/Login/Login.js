@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import "./Login.css";
+import "./login.css";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
-import * as ActionCreators from "../../redux/ActionCreators";
+import * as ActionCreators from "../../redux/actionCreators";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Spinner from "../Spinner/Spinner";
-import HOSTURL from "../../Config";
+import Spinner from "../spinner/Spinner";
+import HOSTURL from "../../config";
 
 const Login = () => {
   const [username, setUsername] = useState("");
