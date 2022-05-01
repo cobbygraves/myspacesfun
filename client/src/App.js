@@ -11,7 +11,7 @@ import Header from "./components/header/header";
 import Footer from "./components/footer/footer";
 import Homepage from "./components/homepage/homepage";
 import Login from "./components/login/login";
-import PostItems from "./components/admin/postItems/postItems";
+import PostItems from "./components/admin/postitems/postitems";
 import CreatePost from "./components/admin/createpost/createpost";
 import SinglePost from "./components/singlepost/singlepost";
 import Videos from "./components/videos/videos";

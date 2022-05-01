@@ -91,7 +91,7 @@ const Reviews = () => {
                   <div className="cate-box1">
                     <div className="cat_offer_text">
                       <img
-                        src={require("../../assets/images/bedRoom.jpg")}
+                        src={require("../../assets/images/bedroom.jpg")}
                         alt="abc"
                       />
                       <h5 className="small">The subrau legacy is no more</h5>

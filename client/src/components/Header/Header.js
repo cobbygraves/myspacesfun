@@ -43,7 +43,7 @@ const Header = () => {
               <a className="nav-link lead">Gallery</a>
             </li>
             <li className="nav-item" onClick={() => navigate("/contact")}>
-              <a className="nav-link lead">Contact Us</a>
+              <a className="nav-link lead">Contact</a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -53,7 +53,7 @@ const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                About Us
+                About
               </a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li>

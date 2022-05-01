@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./postItems.css";
-import PostItem from "../postItem/postItem";
+import "./postitems.css";
+import PostItem from "../postitem/postitem";
 import axios from "axios";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";

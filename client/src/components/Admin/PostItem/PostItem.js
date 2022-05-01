@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./postItem.css";
+import "./postitem.css";
 import EditPost from "../../editpost/editpost";
 
 const PostItem = (props) => {

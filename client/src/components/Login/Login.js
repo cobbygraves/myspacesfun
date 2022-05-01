@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import * as ActionCreators from "../../redux/actioncreators";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Spinner from "../spinner/Spinner";
+import Spinner from "../spinner/spinner";
 import HOSTURL from "../../config";
 
 const Login = () => {

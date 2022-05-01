@@ -1,5 +1,5 @@
 import React from "react";
-import BlogItem from "../blogItem/blogItem";
+import BlogItem from "../blogitem/blogitem";
 import ErrorBoundary from "../errorboundary/errorboundary";
 import "./blogs.css";
 import HOSTURL from "../../config";

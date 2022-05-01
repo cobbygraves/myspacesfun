@@ -4,9 +4,9 @@ import "./sidebar.css";
 
 const images = [
   "bottlesthree.jpg",
-  "differentBottles.jpg",
-  "flowerPot.jpg",
-  "redBottles.jpg",
+  "differentbottles.jpg",
+  "flowerpot.jpg",
+  "redbottles.jpg",
   "wallthree.jpg",
 ];
 let image = Math.floor(Math.random() * 5);
