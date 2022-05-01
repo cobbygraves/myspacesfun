@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./login.css";
+import "./Login.css";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
-import * as ActionCreators from "../../redux/actioncreators";
+import * as ActionCreators from "../../redux/ActionCreators";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Spinner from "../spinner/spinner";
+import Spinner from "../Spinner/Spinner";
 import HOSTURL from "../../config";
 
 const Login = () => {

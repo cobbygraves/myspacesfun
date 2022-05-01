@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./postitem.css";
-import EditPost from "../../editpost/editpost";
+import "./PostItem.css";
+import EditPost from "../../EditPost/EditPost";
 
 const PostItem = (props) => {
   const [edit, setEdit] = useState(false);

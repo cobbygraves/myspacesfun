@@ -1,10 +1,10 @@
 import React, { useCallback, useEffect, useState } from "react";
-import "./postitems.css";
-import PostItem from "../postitem/postitem";
+import "./PostItems.css";
+import PostItem from "../PostItem/PostItem";
 import axios from "axios";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
-import * as ActionCreators from "../../../redux/actioncreators";
+import * as ActionCreators from "../../../redux/ActionCreators";
 import HOSTURL from "../../../config";
 
 const PostItems = () => {

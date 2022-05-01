@@ -1,4 +1,4 @@
-import { SHOWALERT, AUTHUSER } from "./actions";
+import { SHOWALERT, AUTHUSER } from "./Actions";
 import { combineReducers } from "redux";
 
 export const showAlertReducer = (

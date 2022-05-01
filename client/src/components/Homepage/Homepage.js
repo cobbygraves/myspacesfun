@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Carousel from "../carousel/carousel";
-import Home from "../home/home";
-import Blogs from "../blogs/blogs";
-import SideBar from "../sidebar/sidebar";
-import Reviews from "../reviews/reviews";
+import Carousel from "../Carousel/Carousel";
+import Home from "../Home/Home";
+import Blogs from "../Blogs/Blogs";
+import SideBar from "../Sidebar/Sidebar";
+import Reviews from "../Reviews/Reviews";
 import axios from "axios";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
-import * as ActionCreators from "../../redux/actioncreators";
+import * as ActionCreators from "../../redux/ActionCreators";
 import HOSTURL from "../../config";
 
 const Homepage = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { REVIEWS } from "../../data";
-import "./carousel.css";
+import "./Carousel.css";
 
 const Carousel = () => {
   return (

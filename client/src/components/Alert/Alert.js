@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./alert.css";
+import "./Alert.css";
 
 const Alert = (props) => {
   const contents = (

@@ -1,4 +1,4 @@
-import { SHOWALERT, AUTHUSER } from "./actions";
+import { SHOWALERT, AUTHUSER } from "./Actions";
 
 export const showAlert = (show, color, title, message) => {
   return (dispatch) =>

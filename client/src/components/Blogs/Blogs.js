@@ -1,7 +1,7 @@
 import React from "react";
-import BlogItem from "../blogitem/blogitem";
-import ErrorBoundary from "../errorboundary/errorboundary";
-import "./blogs.css";
+import BlogItem from "../BlogItem/BlogItem";
+import ErrorBoundary from "../ErrorBoundary/ErrorBoundary";
+import "./Blogs.css";
 import HOSTURL from "../../config";
 
 const Blogs = (props) => {
