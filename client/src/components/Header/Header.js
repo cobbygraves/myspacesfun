@@ -36,9 +36,7 @@ const Header = () => {
                 Blog
               </a>
             </li>
-            <li className="nav-item" onClick={() => navigate("/vlog")}>
-              <a className="nav-link lead">Vlog</a>
-            </li>
+
             <li className="nav-item" onClick={() => navigate("/gallery")}>
               <a className="nav-link lead">Gallery</a>
             </li>
@@ -150,6 +148,22 @@ const Header = () => {
                     </li>
                     <li onClick={() => navigate("/admin/manage")}>
                       <a className="dropdown-item text-muted">manage posts</a>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li
+                      onClick={() => {
+                        navigate("/admin/media/add");
+                      }}
+                    >
+                      <a className="dropdown-item text-muted">add media</a>
+                    </li>
+                    <li>
+                      <hr className="dropdown-divider" />
+                    </li>
+                    <li onClick={() => navigate("/admin/media/manage")}>
+                      <a className="dropdown-item text-muted">manage media</a>
                     </li>
                   </>
                 ) : (

@@ -29,6 +29,7 @@ const CreatePost = (props) => {
     if (title === "" || content === "" || imageFile === null) {
       return;
     }
+
     const formData = new FormData();
     formData.append("image", imageFile);
     formData.append("title", title);

@@ -14,9 +14,11 @@ import Login from "./components/Login/Login";
 import PostItems from "./components/Admin/PostItems/PostItems";
 import CreatePost from "./components/Admin/CreatePost/CreatePost";
 import SinglePost from "./components/SinglePost/SinglePost";
-import Videos from "./components/Videos/Videos";
+
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
+import ManageMedia from "./components/Admin/ManageMedia/ManageMedia";
+import MediaUpload from "./components/MediaUpload/MediaUpload";
 
 function App() {
   const { alert, userAuthenticated } = useSelector((state) => state);
@@ -38,14 +40,19 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />
-            <Route path="/vlog" element={<Videos />} />
+
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/login" element={<Login />} />
             <Route path="/contact" element={<Contact />} />
             {userAuthenticated && (
-              <Route path="/admin/manage" element={<PostItems />} />
+              <>
+                <Route path="/admin/manage" element={<PostItems />} />
+                <Route path="/admin/create" element={<CreatePost />} />
+                <Route path="/admin/media/manage" element={<ManageMedia />} />
+                <Route path="/admin/media/add" element={<MediaUpload />} />
+              </>
             )}
-            <Route path="/admin/create" element={<CreatePost />} />
+
             <Route path="/post/:id" element={<SinglePost />} />
           </Routes>
           <Footer />

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Login.css";
 import { bindActionCreators } from "redux";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,6 +24,7 @@ const Login = () => {
   const [showSpinner, setShowSpinner] = useState(false);
 
   const navigate = useNavigate();
+  const inputRef = useRef();
 
   const isUserAuth = useSelector((state) => state.userAuthenticated);
   const dispatch = useDispatch();
@@ -105,6 +106,8 @@ const Login = () => {
     }
   }, [isValidPassword, isValidUsername]);
 
+  useEffect(() => inputRef.current.focus(), []);
+
   return (
     <div className="Login">
       <div className="Login-Wrapper p-4 bg-light">
@@ -121,6 +124,7 @@ const Login = () => {
             type="text"
             className="form-control"
             id="username"
+            ref={inputRef}
             value={username}
             onChange={usernameHandler}
           />
