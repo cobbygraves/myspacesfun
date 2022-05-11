@@ -1,7 +1,12 @@
 import React from "react";
+import MediaItems from "../MediaItems/MediaItems";
 
 const ManageMedia = () => {
-  return <div>ManageMedia</div>;
+  return (
+    <>
+      <MediaItems />
+    </>
+  );
 };
 
 export default ManageMedia;

@@ -6,7 +6,7 @@ import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
 import HOSTURL from "../../../config";
 
-const CreatePost = (props) => {
+const CreatePost = () => {
   const dispatch = useDispatch();
   const { showAlert } = bindActionCreators(ActionCreators, dispatch);
 

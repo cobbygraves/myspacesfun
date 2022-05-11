@@ -1,0 +1,31 @@
+.Edit-Media {
+  display: flex;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.Edit-Media-Image {
+  margin-left: 75px;
+  border-radius: 10px;
+  width: 45%;
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 450px) {
+  /* .Edit-Button {
+      margin-left: 0;
+    } */
+
+  .Edit-Media {
+    display: block;
+    width: 100%;
+    margin: 0;
+  }
+
+  .Edit-Media-Image {
+    width: 100%;
+    margin-left: 0;
+  }
+}

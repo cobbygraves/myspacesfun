@@ -5,6 +5,7 @@ const path = require("path");
 const dotenv = require("dotenv");
 const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
+const mediaRouter = require("./routes/media");
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ server.use("/images", express.static(path.join(__dirname, "assets")));
 
 server.use(userRouter);
 server.use(postRouter);
+server.use(mediaRouter);
 
 const PORT = process.env.PORT || 5000;
 

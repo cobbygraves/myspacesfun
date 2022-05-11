@@ -14,7 +14,6 @@ import Login from "./components/Login/Login";
 import PostItems from "./components/Admin/PostItems/PostItems";
 import CreatePost from "./components/Admin/CreatePost/CreatePost";
 import SinglePost from "./components/SinglePost/SinglePost";
-
 import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import ManageMedia from "./components/Admin/ManageMedia/ManageMedia";

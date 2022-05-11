@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import "./MediaUpload.css";
+import React, { useEffect, useState, useCallback } from "react";
 import axios from "axios";
 import HOSTURL from "../../config";
 import * as ActionCreators from "../../redux/ActionCreators";
 import { bindActionCreators } from "redux";
 import { useDispatch } from "react-redux";
+import "./EditMedia.css";
 
-const MediaUpload = () => {
+const EditMedia = (props) => {
+  const [contentFile, setContentFile] = useState(props.image);
+  const [contentURL, setContentURL] = useState("");
+  const [isFileTouched, setIsFileTouched] = useState(false);
+
   const dispatch = useDispatch();
   const { showAlert } = bindActionCreators(ActionCreators, dispatch);
-
-  const [contentFile, setContentFile] = useState({});
-  const [contentURL, setContentURL] = useState("");
 
   const [title, setTitle] = useState("");
   const [isValidTitle, setIsValidTitle] = useState(false);
@@ -41,24 +42,25 @@ const MediaUpload = () => {
     }
   }, [title]);
 
-  const addContentHandler = (event) => {
+  const editContentHandler = (event) => {
     event.preventDefault();
     if (title === "" || contentFile === null) {
       return;
     }
+
     const userDetails = localStorage.getItem("userDetails");
     const userDetailsFormatted = JSON.parse(userDetails);
     const formData = new FormData();
     formData.append("image", contentFile);
     formData.append("title", title);
     axios
-      .post(`${HOSTURL}/media/create`, formData, {
+      .put(`${HOSTURL}/media/update`, formData, {
         headers: {
           authorization: `Bearer ${userDetailsFormatted.token}`,
         },
       })
       .then((res) => {
-        showAlert(true, "green", "SUCCESS", "post created");
+        showAlert(true, "green", "SUCCESS", "media created");
         setTitle("");
         setContentFile({});
       })
@@ -73,13 +75,54 @@ const MediaUpload = () => {
       const imageURL = URL.createObjectURL(imgFile);
       setContentFile(imgFile);
       setContentURL(imageURL);
+      setIsFileTouched(true);
     }
   };
+
+  const loadPost = useCallback(() => {
+    try {
+      axios.get(`${HOSTURL}/media/${props.id}`).then((res) => {
+        const mediaData = res.data;
+        setTitle(mediaData.title);
+        setContentFile(mediaData.media);
+        setFormValid(true);
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
+
+  useEffect(() => {
+    loadPost();
+  }, []);
+
+  let imageElement = (
+    <img
+      src={`${HOSTURL}/images/${contentFile}`}
+      alt=""
+      className="Edit-Media-Image"
+    />
+  );
+  let videoElement = (
+    <video
+      className="Edit-Media-Image"
+      src={`${HOSTURL}/images/${contentFile}`}
+      controls
+    ></video>
+  );
+
+  if (isFileTouched) {
+    imageElement = <img src={contentURL} alt="" className="Edit-Media-Image" />;
+    videoElement = (
+      <video className="Edit-Media-Image" src={contentURL} controls></video>
+    );
+  }
+
   return (
-    <div className="Admin-Create-Post">
+    <div className="Edit-Media">
       {!contentFile && isTitleTouched && (
         <p className="text-danger Admin-Error">
-          please select an{" "}
+          please select{" "}
           {(contentFile && contentFile.type === "image/jpeg") ||
           contentFile.type === "image/png"
             ? " Image"
@@ -87,13 +130,11 @@ const MediaUpload = () => {
         </p>
       )}
       {(contentFile && contentFile.type === "image/jpeg") ||
-      contentFile.type === "image/png" ? (
-        <img src={contentURL} alt="" />
-      ) : (
-        <video className="Upload-Video" src={contentURL} controls></video>
-      )}
+      contentFile.type === "image/png"
+        ? imageElement
+        : videoElement}
 
-      <form onSubmit={addContentHandler}>
+      <form onSubmit={editContentHandler}>
         <div className="Admin-Post-Group">
           <label htmlFor="media" className="Post-Label">
             <i className="bi bi-image"></i>
@@ -121,7 +162,7 @@ const MediaUpload = () => {
           className="btn btn-secondary Upload-Button"
           disabled={!formValid}
         >
-          Add
+          Update
           {(contentFile && contentFile.type === "image/jpeg") ||
           contentFile.type === "image/png"
             ? " Image"
@@ -132,4 +173,4 @@ const MediaUpload = () => {
   );
 };
 
-export default MediaUpload;
+export default EditMedia;

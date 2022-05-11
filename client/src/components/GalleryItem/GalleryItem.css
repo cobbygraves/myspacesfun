@@ -1,0 +1,9 @@
+.Gallery-Item-Root {
+  width: 375px;
+  height: 375px;
+}
+
+.Gallery-Item-Root img {
+  width: 100%;
+  height: 350px;
+}
