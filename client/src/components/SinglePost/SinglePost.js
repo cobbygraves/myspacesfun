@@ -6,7 +6,7 @@ import SideBar from "../Sidebar/Sidebar";
 import axios from "axios";
 import HOSTURL from "../../config";
 
-const SinglePost = (props) => {
+const SinglePost = () => {
   const { id } = useParams();
 
   const [selectedPost, setSelectedPost] = useState({

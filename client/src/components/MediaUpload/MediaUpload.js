@@ -58,7 +58,7 @@ const MediaUpload = () => {
         },
       })
       .then((res) => {
-        showAlert(true, "green", "SUCCESS", "post created");
+        showAlert(true, "green", "SUCCESS", "media created");
         setTitle("");
         setContentFile({});
       })
@@ -78,21 +78,9 @@ const MediaUpload = () => {
   return (
     <div className="Admin-Create-Post">
       {!contentFile && isTitleTouched && (
-        <p className="text-danger Admin-Error">
-          please select an{" "}
-          {(contentFile && contentFile.type === "image/jpeg") ||
-          contentFile.type === "image/png"
-            ? " Image"
-            : " Video"}
-        </p>
+        <p className="text-danger Admin-Error">please select an image</p>
       )}
-      {(contentFile && contentFile.type === "image/jpeg") ||
-      contentFile.type === "image/png" ? (
-        <img src={contentURL} alt="" />
-      ) : (
-        <video className="Upload-Video" src={contentURL} controls></video>
-      )}
-
+      {contentFile && <img src={contentURL} alt="" />}
       <form onSubmit={addContentHandler}>
         <div className="Admin-Post-Group">
           <label htmlFor="media" className="Post-Label">
@@ -100,7 +88,7 @@ const MediaUpload = () => {
           </label>
           <input
             type="file"
-            accept="image/*, video/mp4"
+            accept="image/*"
             id="media"
             style={{ display: "none" }}
             onChange={imageChangeHandler}
@@ -121,11 +109,7 @@ const MediaUpload = () => {
           className="btn btn-secondary Upload-Button"
           disabled={!formValid}
         >
-          Add
-          {(contentFile && contentFile.type === "image/jpeg") ||
-          contentFile.type === "image/png"
-            ? " Image"
-            : " Video"}
+          Add Media
         </button>
       </form>
     </div>

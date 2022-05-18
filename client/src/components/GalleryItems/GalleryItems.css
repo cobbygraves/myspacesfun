@@ -1,0 +1,15 @@
+.Gallery-Items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media screen and (max-width: 450px) {
+  .Gallery-Items {
+    display: block;
+  }
+}

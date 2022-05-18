@@ -103,37 +103,17 @@ const EditMedia = (props) => {
       className="Edit-Media-Image"
     />
   );
-  let videoElement = (
-    <video
-      className="Edit-Media-Image"
-      src={`${HOSTURL}/images/${contentFile}`}
-      controls
-    ></video>
-  );
 
   if (isFileTouched) {
     imageElement = <img src={contentURL} alt="" className="Edit-Media-Image" />;
-    videoElement = (
-      <video className="Edit-Media-Image" src={contentURL} controls></video>
-    );
   }
 
   return (
     <div className="Edit-Media">
       {!contentFile && isTitleTouched && (
-        <p className="text-danger Admin-Error">
-          please select{" "}
-          {(contentFile && contentFile.type === "image/jpeg") ||
-          contentFile.type === "image/png"
-            ? " Image"
-            : " Video"}
-        </p>
+        <p className="text-danger Admin-Error">please select an imageg</p>
       )}
-      {(contentFile && contentFile.type === "image/jpeg") ||
-      contentFile.type === "image/png"
-        ? imageElement
-        : videoElement}
-
+      {contentFile && imageElement}
       <form onSubmit={editContentHandler}>
         <div className="Admin-Post-Group">
           <label htmlFor="media" className="Post-Label">
@@ -141,7 +121,7 @@ const EditMedia = (props) => {
           </label>
           <input
             type="file"
-            accept="image/*, video/mp4"
+            accept="image/*"
             id="media"
             style={{ display: "none" }}
             onChange={imageChangeHandler}
@@ -162,11 +142,7 @@ const EditMedia = (props) => {
           className="btn btn-secondary Upload-Button"
           disabled={!formValid}
         >
-          Update
-          {(contentFile && contentFile.type === "image/jpeg") ||
-          contentFile.type === "image/png"
-            ? " Image"
-            : " Video"}
+          Update Media
         </button>
       </form>
     </div>

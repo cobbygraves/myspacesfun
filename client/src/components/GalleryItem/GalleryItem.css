@@ -1,9 +1,18 @@
 .Gallery-Item-Root {
-  width: 375px;
-  height: 375px;
+  width: 350px;
+  margin: 10px;
 }
 
 .Gallery-Item-Root img {
   width: 100%;
   height: 350px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 450px) {
+  .Gallery-Item-Root {
+    width: 325px;
+    margin: 10px 0;
+  }
 }
