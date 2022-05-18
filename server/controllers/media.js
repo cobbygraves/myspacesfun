@@ -55,9 +55,11 @@ const updateMedia = (req, res, next) => {
     fileName = req.file.filename;
   }
   const updatedMedia = { media: fileName, ...req.body };
+
   const { id } = updatedMedia;
+
   MediaModel.findOneAndUpdate(
-    { id: id },
+    { id },
     updatedMedia,
     {
       new: true,

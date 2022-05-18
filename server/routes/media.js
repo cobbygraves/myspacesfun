@@ -21,7 +21,7 @@ mediaRouter.post(
   addMedia
 );
 mediaRouter.put(
-  "/media/update",
+  "/media/update/:id",
   verifyToken,
   upload.single("image"),
   updateMedia

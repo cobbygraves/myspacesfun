@@ -53,8 +53,9 @@ const EditMedia = (props) => {
     const formData = new FormData();
     formData.append("image", contentFile);
     formData.append("title", title);
+    formData.append("id", props.id);
     axios
-      .put(`${HOSTURL}/media/update`, formData, {
+      .put(`${HOSTURL}/media/update/${props.id}`, formData, {
         headers: {
           authorization: `Bearer ${userDetailsFormatted.token}`,
         },
