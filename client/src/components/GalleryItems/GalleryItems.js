@@ -7,6 +7,10 @@ import HOSTURL from "../../config";
 function GalleryItems() {
   const [galleryItems, setGalleryItems] = useState([]);
 
+  const showImageHandler = (imageName) => {
+    window.open(`${HOSTURL}/images/${imageName}`);
+  };
+
   useEffect(() => {
     axios
       .get(`${HOSTURL}/media`)
@@ -25,6 +29,7 @@ function GalleryItems() {
             key={eachGallery.id}
             description={eachGallery.title}
             photo={eachGallery.media}
+            showImage={() => showImageHandler(eachGallery.media)}
           />
         ))
       ) : (

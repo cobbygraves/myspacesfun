@@ -61,7 +61,7 @@ const EditMedia = (props) => {
         },
       })
       .then((res) => {
-        showAlert(true, "green", "SUCCESS", "media created");
+        showAlert(true, "green", "SUCCESS", "media updated successfully");
         setTitle("");
         setContentFile({});
       })
