@@ -11,17 +11,12 @@ const verifyToken = require("../middlewares/verifyToken");
 
 const mediaRouter = express.Router();
 
-mediaRouter.get("/media", readMedia);
-mediaRouter.get("/media/:id", showMedia);
-mediaRouter.delete("/media/:id", verifyToken, deleteMedia);
-mediaRouter.post(
-  "/media/create",
-  verifyToken,
-  upload.single("image"),
-  addMedia
-);
+mediaRouter.get("/", readMedia);
+mediaRouter.get("/:id", showMedia);
+mediaRouter.delete("/:id", verifyToken, deleteMedia);
+mediaRouter.post("/create", verifyToken, upload.single("image"), addMedia);
 mediaRouter.put(
-  "/media/update/:id",
+  "/update/:id",
   verifyToken,
   upload.single("image"),
   updateMedia

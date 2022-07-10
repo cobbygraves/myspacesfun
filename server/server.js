@@ -17,9 +17,9 @@ server.use(cors());
 
 server.use("/images", express.static(path.join(__dirname, "assets")));
 
-server.use(userRouter);
-server.use(postRouter);
-server.use(mediaRouter);
+server.use("/admin", userRouter);
+server.use("/posts", postRouter);
+server.use("/media", mediaRouter);
 
 const PORT = process.env.PORT || 5000;
 

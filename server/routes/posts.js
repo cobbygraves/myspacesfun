@@ -13,17 +13,12 @@ const verifyToken = require("../middlewares/verifyToken");
 
 const postRouter = express.Router();
 
-postRouter.get("/posts", readPosts);
-postRouter.get("/posts/category/:postCat", readCat);
-postRouter.get("/posts/:id", showPost);
-postRouter.delete("/posts/:id", verifyToken, deletePost);
-postRouter.post("/posts/create", verifyToken, upload.single("image"), addPost);
-postRouter.put(
-  "/posts/update",
-  verifyToken,
-  upload.single("image"),
-  updatePost
-);
-postRouter.put("/posts/publish", verifyToken, togglePublish);
+postRouter.get("/", readPosts);
+postRouter.get("/category/:postCat", readCat);
+postRouter.get("/:id", showPost);
+postRouter.delete("/:id", verifyToken, deletePost);
+postRouter.post("/create", verifyToken, upload.single("image"), addPost);
+postRouter.put("/update", verifyToken, upload.single("image"), updatePost);
+postRouter.put("/publish", verifyToken, togglePublish);
 
 module.exports = postRouter;
