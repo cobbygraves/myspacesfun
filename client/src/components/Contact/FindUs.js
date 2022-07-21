@@ -6,7 +6,7 @@ const FindUs = () => {
     <Box
       sx={(theme) => ({
         position: "relative",
-        bottom: 100,
+        bottom: 175,
         [theme.breakpoints.down("sm")]: {
           bottom: 25,
           marginBottom: 5,

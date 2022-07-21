@@ -6,14 +6,14 @@ import Typography from "@mui/material/Typography";
 const PageCard = (props) => {
   return (
     <Card
-      sx={{
+      sx={(theme) => ({
         maxWidth: props.width,
         marginLeft: 5,
         marginRight: 5,
         marginTop: 7,
         marginBottom: 7,
         backgroundColor: props.background,
-      }}
+      })}
       raised={props.raised}
     >
       <div>{props.iconComponent}</div>
