@@ -3,22 +3,20 @@ import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 
-const AboutCard = (props) => {
+const PageCard = (props) => {
   return (
     <Card
       sx={{
-        maxWidth: 345,
+        maxWidth: props.width,
         marginLeft: 5,
         marginRight: 5,
         marginTop: 7,
         marginBottom: 7,
+        backgroundColor: props.background,
       }}
-      raised
+      raised={props.raised}
     >
-      <div>
-        {/* <ForumIcon fontSize="32px" /> */}
-        {props.iconComponent}
-      </div>
+      <div>{props.iconComponent}</div>
       <CardContent>
         <Typography gutterBottom variant="h4" component="div">
           {props.title}
@@ -29,4 +27,4 @@ const AboutCard = (props) => {
   );
 };
 
-export default AboutCard;
+export default PageCard;

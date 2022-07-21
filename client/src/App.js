@@ -18,6 +18,7 @@ import Gallery from "./components/Gallery/Gallery";
 import Contact from "./components/Contact/Contact";
 import ManageMedia from "./components/Admin/ManageMedia/ManageMedia";
 import MediaUpload from "./components/MediaUpload/MediaUpload";
+import About from "./components/About/About";
 
 function App() {
   const { alert, userAuthenticated } = useSelector((state) => state);
@@ -43,6 +44,7 @@ function App() {
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/login" element={<Login />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
             {userAuthenticated && (
               <>
                 <Route path="/admin/manage" element={<PostItems />} />

@@ -43,33 +43,8 @@ const Header = () => {
             <li className="nav-item" onClick={() => navigate("/contact")}>
               <a className="nav-link lead">Contact</a>
             </li>
-            <li className="nav-item dropdown">
-              <a
-                className="nav-link dropdown-toggle lead"
-                id="navbarDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                About
-              </a>
-              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li>
-                  <a className="dropdown-item text-muted">disclaimer</a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item text-muted">privacy policy</a>
-                </li>
-                <li>
-                  <hr className="dropdown-divider" />
-                </li>
-                <li>
-                  <a className="dropdown-item text-muted">terms of use</a>
-                </li>
-              </ul>
+            <li className="nav-item" onClick={() => navigate("/about")}>
+              <a className="nav-link lead">About</a>
             </li>
             <li className="nav-item dropdown">
               <a
