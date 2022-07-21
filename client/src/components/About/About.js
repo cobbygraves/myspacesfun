@@ -21,7 +21,7 @@ const About = () => {
       </Box>
 
       <Box>
-        <AboutCard width="100%" background="#838D95" raised>
+        <AboutCard width="100%" background="#353E4D" raised>
           <Grid container justifyContent="space-around" alignItems="center">
             <Grid item xs={12} sm={6}>
               <img
