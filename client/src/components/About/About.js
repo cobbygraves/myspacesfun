@@ -91,7 +91,7 @@ const About = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <Typography variant="h4" sx={{ marginBottom: 2 }}>
-                Disclaimer
+                Terms of Use
               </Typography>
               <Typography align="justify">
                 Anim adipisicing eu sit est esse. Non sint aliqua Lorem nisi
