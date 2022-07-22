@@ -30,10 +30,13 @@ const About = () => {
               />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <Typography variant="h4" sx={{ marginBottom: 2 }}>
+              <Typography
+                variant="h4"
+                sx={{ marginBottom: 2, marginTop: 2, color: "white" }}
+              >
                 Disclaimer
               </Typography>
-              <Typography align="justify">
+              <Typography align="justify text-light">
                 Anim adipisicing eu sit est esse. Non sint aliqua Lorem nisi
                 voluptate velit ullamco velit consectetur cupidatat pariatur in
                 aliqua. Ullamco commodo ea pariatur deserunt cillum pariatur
